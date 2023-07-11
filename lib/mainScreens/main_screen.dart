@@ -838,9 +838,10 @@ class _MainScreenState extends State<MainScreen>
                       //aqui tengo que agregar la captura de foto para el objeto
                       Row(
                         children: [
+
                           ElevatedButton(
                             onPressed: () async {
-                              final image = await ImagePicker().pickImage(source: ImageSource.camera);
+                              final image = await ImagePicker().pickImage(source: ImageSource.gallery);
                               if (image != null) {
                                 setState(() {
                                   _selectedImage = File(image.path);
